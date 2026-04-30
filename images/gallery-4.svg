@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3730A3"/><stop offset="50%" stop-color="#7B5CB8"/><stop offset="100%" stop-color="#C4B0E8"/></linearGradient>
+    <linearGradient id="snow4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="60%" stop-color="#E8E8FF"/><stop offset="100%" stop-color="#C4B0E8"/></linearGradient>
+    <linearGradient id="rock4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9B7FD4"/><stop offset="100%" stop-color="#4A4080"/></linearGradient>
+    <linearGradient id="valley4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16A34A"/><stop offset="100%" stop-color="#0D7A30"/></linearGradient>
+    <linearGradient id="lake4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2DD4BF"/><stop offset="100%" stop-color="#0D9488"/></linearGradient>
+    <filter id="snowglow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky4)"/>
+  <!-- Stars -->
+  <circle cx="40" cy="40" r="2" fill="white" opacity="0.9"/><circle cx="100" cy="20" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="180" cy="55" r="2" fill="white" opacity="0.7"/><circle cx="240" cy="25" r="1.8" fill="white" opacity="0.9"/>
+  <circle cx="700" cy="30" r="2" fill="white" opacity="0.9"/><circle cx="760" cy="15" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="620" cy="50" r="2" fill="white" opacity="0.7"/><circle cx="540" cy="20" r="1.8" fill="white" opacity="0.9"/>
+  <!-- Moon -->
+  <circle cx="680" cy="75" r="30" fill="#FFF9C4" opacity="0.85" filter="url(#snowglow)"/>
+  <!-- Far mountains (lighter, purple) -->
+  <path d="M0 350 Q80 220 160 280 Q240 200 320 260 Q400 180 480 260 Q560 200 640 270 Q720 210 800 280 L800 500 L0 500Z" fill="url(#rock4)" opacity="0.65"/>
+  <!-- Main mountains (darker) -->
+  <path d="M0 400 Q60 290 130 350 Q200 250 270 320 Q340 210 400 265 Q460 210 530 320 Q600 250 670 340 Q740 280 800 350 L800 500 L0 500Z" fill="url(#rock4)"/>
+  <!-- Snow caps -->
+  <path d="M270 320 Q310 235 340 255 Q360 220 380 240 Q395 210 415 235 Q435 220 450 250 Q465 225 480 255 Q460 210 530 320 Q500 285 470 295 Q450 260 430 275 Q410 250 390 270 Q370 245 350 268 Q325 250 300 285Z" fill="url(#snow4)" filter="url(#snowglow)"/>
+  <path d="M130 350 Q165 295 185 310 Q205 270 225 295 Q245 270 265 305 Q240 285 210 290 Q185 265 160 285Z" fill="url(#snow4)" filter="url(#snowglow)"/>
+  <!-- Valley (green) -->
+  <path d="M0 430 Q150 400 300 420 Q450 440 600 415 Q700 405 800 420 L800 500 L0 500Z" fill="url(#valley4)"/>
+  <!-- Mountain lake (teal) -->
+  <ellipse cx="400" cy="450" rx="180" ry="28" fill="url(#lake4)" opacity="0.85"/>
+  <ellipse cx="400" cy="448" rx="180" ry="10" fill="#2DD4BF" opacity="0.3"/>
+  <!-- Pine trees -->
+  <polygon points="80,435 95,395 110,435" fill="#1B5E20"/>
+  <polygon points="110,435 122,402 134,435" fill="#2E7D32"/>
+  <polygon points="660,430 675,390 690,430" fill="#1B5E20"/>
+  <polygon points="688,432 700,400 712,432" fill="#2E7D32"/>
+  <polygon points="712,430 723,405 734,430" fill="#1B5E20"/>
+  <!-- Lavender accent glow in sky -->
+  <ellipse cx="400" cy="100" rx="350" ry="80" fill="#9B7FD4" opacity="0.08"/>
+  <!-- Destination badge -->
+  <rect x="18" y="18" width="148" height="36" rx="18" fill="rgba(20,0,60,0.55)"/>
+  <text x="92" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="15" fill="white" font-weight="bold">⛰ Альпы</text>
+</svg>

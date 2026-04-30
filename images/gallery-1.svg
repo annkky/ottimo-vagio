@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF7043"/><stop offset="45%" stop-color="#FFAB91"/><stop offset="100%" stop-color="#2DD4BF"/></linearGradient>
+    <linearGradient id="sea1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2DD4BF"/><stop offset="100%" stop-color="#0D9488"/></linearGradient>
+    <linearGradient id="sand1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDE68A"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient>
+    <radialGradient id="sun1" cx="50%" cy="50%"><stop offset="0%" stop-color="#FCD34D"/><stop offset="60%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#FBBF24" stop-opacity="0"/></radialGradient>
+    <filter id="glow1"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky1)"/>
+  <!-- Sun glow -->
+  <circle cx="400" cy="195" r="90" fill="#FF7043" opacity="0.25"/>
+  <circle cx="400" cy="195" r="48" fill="url(#sun1)" filter="url(#glow1)"/>
+  <!-- Clouds -->
+  <ellipse cx="130" cy="120" rx="85" ry="22" fill="white" opacity="0.65"/>
+  <ellipse cx="175" cy="107" rx="58" ry="19" fill="white" opacity="0.65"/>
+  <ellipse cx="660" cy="95" rx="90" ry="23" fill="white" opacity="0.55"/>
+  <ellipse cx="715" cy="83" rx="55" ry="17" fill="white" opacity="0.55"/>
+  <!-- Sea -->
+  <rect y="270" width="800" height="230" fill="url(#sea1)"/>
+  <!-- Wave highlights -->
+  <path d="M0 285 Q100 275 200 285 Q300 295 400 285 Q500 275 600 285 Q700 295 800 285" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" fill="none"/>
+  <path d="M0 315 Q150 307 300 315 Q450 323 600 315 Q700 310 800 315" stroke="rgba(255,255,255,0.35)" stroke-width="1.8" fill="none"/>
+  <path d="M0 345 Q200 338 400 345 Q600 352 800 345" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+  <!-- Sun reflection on water -->
+  <ellipse cx="400" cy="310" rx="60" ry="120" fill="#FCD34D" opacity="0.12" transform="rotate(0,400,310)"/>
+  <!-- Sandy island -->
+  <ellipse cx="400" cy="435" rx="270" ry="52" fill="url(#sand1)"/>
+  <ellipse cx="400" cy="415" rx="310" ry="25" fill="#2DD4BF" opacity="0.28"/>
+  <!-- Palm left -->
+  <path d="M195 455 Q200 385 215 330" stroke="#6D4C41" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M215 335 Q165 300 122 312" stroke="#2E7D32" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <ellipse cx="140" cy="315" rx="38" ry="13" fill="#388E3C" transform="rotate(-15 140 315)"/>
+  <path d="M215 335 Q258 293 292 298" stroke="#2E7D32" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <ellipse cx="278" cy="300" rx="34" ry="12" fill="#2E7D32" transform="rotate(12 278 300)"/>
+  <path d="M215 335 Q212 280 207 258" stroke="#43A047" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <ellipse cx="207" cy="265" rx="22" ry="10" fill="#43A047"/>
+  <circle cx="214" cy="332" r="7" fill="#F59E0B"/>
+  <!-- Palm right -->
+  <path d="M605 455 Q598 388 580 330" stroke="#6D4C41" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M580 335 Q540 298 505 308" stroke="#2E7D32" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <ellipse cx="520" cy="311" rx="36" ry="12" fill="#388E3C" transform="rotate(15 520 311)"/>
+  <path d="M580 335 Q622 292 652 298" stroke="#2E7D32" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <ellipse cx="638" cy="300" rx="32" ry="12" fill="#2E7D32" transform="rotate(-12 638 300)"/>
+  <path d="M580 335 Q582 280 587 258" stroke="#43A047" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <ellipse cx="586" cy="265" rx="22" ry="10" fill="#43A047"/>
+  <circle cx="579" cy="332" r="7" fill="#F59E0B"/>
+  <!-- Overwater bungalow -->
+  <rect x="355" y="318" width="90" height="55" fill="#FAF5E4" rx="3"/>
+  <polygon points="342,318 458,318 400,278" fill="#D97706"/>
+  <rect x="392" y="373" width="16" height="42" fill="#A1887F"/>
+  <!-- Destination badge -->
+  <rect x="18" y="18" width="148" height="36" rx="18" fill="rgba(0,0,0,0.45)"/>
+  <text x="92" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="15" fill="white" font-weight="bold">🏝 Мальдивы</text>
+</svg>

@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OOO OTTIMO VIAGGIO TRAVEL — турагентство в Ташкенте. Пакетные туры, авиабилеты, визовая поддержка, отели, трансферы, круизы.">
+    <title>OTTIMO VIAGGIO TRAVEL — Bella Vita</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="nav" id="nav">
+    <div class="container">
+        <a href="#home" class="nav-logo">
+            <div class="ico"><i class="fas fa-paper-plane"></i></div>
+            <div class="txt">
+                <span class="l1">OTTIMO VIAGGIO</span>
+                <span class="l2">Travel Agency</span>
+            </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home"     data-k="nav_home">Главная</a>
+            <a href="#about"    data-k="nav_about">О нас</a>
+            <a href="#services" data-k="nav_services">Услуги</a>
+            <a href="#gallery"  data-k="nav_gallery">Направления</a>
+            <a href="#director" data-k="nav_director">Директор</a>
+            <a href="#contact"  data-k="nav_contact">Контакты</a>
+        </div>
+
+        <div class="langs" id="desktopLangs">
+            <button class="lang-btn active" data-l="ru" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn"        data-l="en" onclick="setLang('en')">EN</button>
+            <button class="lang-btn"        data-l="it" onclick="setLang('it')">IT</button>
+            <button class="lang-btn"        data-l="uz" onclick="setLang('uz')">UZ</button>
+        </div>
+
+        <button class="burger" id="burger" onclick="openMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mob-menu" id="mobMenu">
+    <button class="mob-close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+    <a href="#home"     onclick="closeMenu()" data-k="nav_home">Главная</a>
+    <a href="#about"    onclick="closeMenu()" data-k="nav_about">О нас</a>
+    <a href="#services" onclick="closeMenu()" data-k="nav_services">Услуги</a>
+    <a href="#gallery"  onclick="closeMenu()" data-k="nav_gallery">Направления</a>
+    <a href="#director" onclick="closeMenu()" data-k="nav_director">Директор</a>
+    <a href="#contact"  onclick="closeMenu()" data-k="nav_contact">Контакты</a>
+    <div class="mob-langs">
+        <button class="lang-btn active" data-l="ru" onclick="setLang('ru');closeMenu()">RU</button>
+        <button class="lang-btn"        data-l="en" onclick="setLang('en');closeMenu()">EN</button>
+        <button class="lang-btn"        data-l="it" onclick="setLang('it');closeMenu()">IT</button>
+        <button class="lang-btn"        data-l="uz" onclick="setLang('uz');closeMenu()">UZ</button>
+    </div>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="home" class="hero">
+    <div class="hero-bg">
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80')"></div>
+    </div>
+    <div class="hero-shapes" id="shapes"></div>
+
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Tashkent &bull; Uzbekistan &bull; Bella Vita
+            </div>
+
+            <h1 class="hero-h1">
+                <span>OTTIMO</span>
+                <span class="grad-text">VIAGGIO</span>
+            </h1>
+            <p class="hero-sub">TRAVEL AGENCY</p>
+            <p class="hero-slogan" data-k="hero_slogan">
+                Выбирайте Ottimo Viaggio. Ваше путешествие в стиле Bella Vita!
+            </p>
+
+            <div class="hero-btns">
+                <a href="#services" class="btn btn-primary" data-k="hero_cta">
+                    <i class="fas fa-compass"></i> Узнать больше
+                </a>
+                <a href="#contact" class="btn btn-ghost" data-k="hero_contact">
+                    <i class="fas fa-phone-alt"></i> Связаться
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="h-stat"><div class="num">7+</div><div class="lbl" data-k="stat_s">Услуг</div></div>
+                <div class="h-stat"><div class="num">100+</div><div class="lbl" data-k="stat_d">Направлений</div></div>
+                <div class="h-stat"><div class="num">12h</div><div class="lbl" data-k="stat_h">Работа в день</div></div>
+                <div class="h-stat"><div class="num">★★★★★</div><div class="lbl" data-k="stat_q">Качество</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <div class="scroll-mouse"></div>
+    </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <div class="tag tag--lav" data-k="about_tag">О компании</div>
+                <h2 class="sec-title" data-kh="about_title">
+                    Ваш надёжный <span class="grad-text">партнёр</span> в мире путешествий
+                </h2>
+                <p class="sec-sub" data-k="about_text">
+                    OOO "OTTIMO VIAGGIO TRAVEL" — ваш надёжный проводник в мире путешествий. Мы берём на себя все заботы по организации вашего отдыха: от подбора лучших отелей и авиабилетов до формирования сложных индивидуальных маршрутов. Наш приоритет — ваш комфорт, безопасность и безупречный сервис на каждом этапе пути. Открывайте мир вместе с профессионалами!
+                </p>
+                <div class="feats">
+                    <div class="feat reveal d1">
+                        <div class="fi"><i class="fas fa-globe-europe"></i></div>
+                        <div class="ft"><h4 data-k="f1h">Весь мир</h4><p data-k="f1p">100+ направлений</p></div>
+                    </div>
+                    <div class="feat reveal d2">
+                        <div class="fi"><i class="fas fa-shield-alt"></i></div>
+                        <div class="ft"><h4 data-k="f2h">Безопасность</h4><p data-k="f2p">Надёжная защита</p></div>
+                    </div>
+                    <div class="feat reveal d3">
+                        <div class="fi"><i class="fas fa-star"></i></div>
+                        <div class="ft"><h4 data-k="f3h">Качество</h4><p data-k="f3p">Лучший сервис</p></div>
+                    </div>
+                    <div class="feat reveal d4">
+                        <div class="fi"><i class="fas fa-gem"></i></div>
+                        <div class="ft"><h4 data-k="f4h">VIP подход</h4><p data-k="f4p">Индивидуально</p></div>
+                    </div>
+                </div>
+                <div class="about-photos reveal d5">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=300&q=75" alt="Путешествие" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?auto=format&fit=crop&w=300&q=75" alt="Горы" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=300&q=75" alt="Океан" loading="lazy">
+                </div>
+            </div>
+
+            <div class="reveal d2">
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Travel planning" class="about-card-img">
+                    <div class="about-card-inner">
+                        <h3 data-k="acard_t">OOO "OTTIMO VIAGGIO TRAVEL"</h3>
+                        <p data-k="acard_p">Профессиональное турагентство в Ташкенте. Опыт, забота и результат.</p>
+                        <div class="stats-g">
+                            <div class="stat-box"><div class="n">7+</div><div class="l" data-k="as1">Услуг</div></div>
+                            <div class="stat-box"><div class="n">100+</div><div class="l" data-k="as2">Направлений</div></div>
+                            <div class="stat-box"><div class="n">12h</div><div class="l" data-k="as3">Ежедневно</div></div>
+                            <div class="stat-box"><div class="n">∞</div><div class="l" data-k="as4">Забота</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="svc-head reveal">
+            <div class="tag tag--teal" data-k="svc_tag">Что мы предлагаем</div>
+            <h2 class="sec-title" data-kh="svc_title">Наши <span class="grad-text">услуги</span></h2>
+            <p class="sec-sub" data-k="svc_sub">Полный спектр туристических услуг для идеального путешествия</p>
+        </div>
+
+        <div class="svc-grid">
+            <div class="svc-card reveal d1">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=600&q=75" alt="Пакетный тур" loading="lazy"></div>
+                <div class="svc-ico ico-lav"><i class="fas fa-suitcase-rolling"></i></div>
+                <h3 data-k="s1">Пакетные туры</h3>
+                <p data-k="s1d">Готовые пакеты для незабываемого отдыха по лучшим ценам</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d2">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=600&q=75" alt="Индивидуальный тур" loading="lazy"></div>
+                <div class="svc-ico ico-teal"><i class="fas fa-map-marked-alt"></i></div>
+                <h3 data-k="s2">Индивидуальные туры</h3>
+                <p data-k="s2d">Маршруты, созданные специально для вас с учётом всех пожеланий</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d3">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=75" alt="Виза" loading="lazy"></div>
+                <div class="svc-ico ico-org"><i class="fas fa-passport"></i></div>
+                <h3 data-k="s3">Визовая поддержка</h3>
+                <p data-k="s3d">Помощь в оформлении виз любой сложности и категории</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d4">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?auto=format&fit=crop&w=600&q=75" alt="Авиабилет" loading="lazy"></div>
+                <div class="svc-ico ico-lav"><i class="fas fa-plane-departure"></i></div>
+                <h3 data-k="s4">Авиабилеты</h3>
+                <p data-k="s4d">Лучшие цены на авиаперелёты по всем направлениям мира</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d5">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=75" alt="Отель" loading="lazy"></div>
+                <div class="svc-ico ico-teal"><i class="fas fa-hotel"></i></div>
+                <h3 data-k="s5">Бронирование отелей</h3>
+                <p data-k="s5d">Широкий выбор отелей для любого бюджета и предпочтения</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d6">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=600&q=75" alt="Трансфер" loading="lazy"></div>
+                <div class="svc-ico ico-org"><i class="fas fa-car-side"></i></div>
+                <h3 data-k="s6">Трансферы</h3>
+                <p data-k="s6d">Комфортные трансферы в аэропорт и по всем направлениям</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="svc-card reveal d7">
+                <div class="svc-card-img"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=75" alt="Круиз" loading="lazy"></div>
+                <div class="svc-ico ico-lav"><i class="fas fa-ship"></i></div>
+                <h3 data-k="s7">Круизы</h3>
+                <p data-k="s7d">Незабываемые морские путешествия по лучшим маршрутам</p>
+                <div class="svc-arr"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== GALLERY ==================== -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="gal-head reveal">
+            <div class="tag tag--org" data-k="gal_tag">Направления</div>
+            <h2 class="sec-title" data-kh="gal_title">Популярные <span class="grad-text">направления</span></h2>
+            <p class="sec-sub" data-k="gal_sub">Откройте для себя лучшие уголки нашей планеты</p>
+        </div>
+        <div class="gal-carousel-wrap">
+            <button class="gal-btn gal-prev" aria-label="Предыдущий"><i class="fas fa-chevron-left"></i></button>
+            <div class="gal-viewport">
+                <div class="gal-track" id="galTrack">
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1540202403-b7abd6747a18?auto=format&fit=crop&w=800&q=80" alt="Мальдивы" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd1">Мальдивы</span>
+                            <p class="gal-sub-t" data-k="gd1s">Тропический рай</p>
+                        </div>
+                    </div>
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=800&q=80" alt="Рим" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd2">Рим / Италия</span>
+                            <p class="gal-sub-t" data-k="gd2s">Вечный город</p>
+                        </div>
+                    </div>
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Дубай" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd3">Дубай</span>
+                            <p class="gal-sub-t" data-k="gd3s">Город будущего</p>
+                        </div>
+                    </div>
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Альпы" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd4">Альпы</span>
+                            <p class="gal-sub-t" data-k="gd4s">Горные приключения</p>
+                        </div>
+                    </div>
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1535890696255-dd5bcd79e6df?auto=format&fit=crop&w=800&q=80" alt="Круизы" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd5">Круизы</span>
+                            <p class="gal-sub-t" data-k="gd5s">Морские путешествия</p>
+                        </div>
+                    </div>
+                    <div class="gal-slide">
+                        <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80" alt="Стамбул" loading="lazy">
+                        <div class="gal-overlay">
+                            <span class="gal-dest" data-k="gd6">Стамбул</span>
+                            <p class="gal-sub-t" data-k="gd6s">Мост двух миров</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="gal-btn gal-next" aria-label="Следующий"><i class="fas fa-chevron-right"></i></button>
+            <div class="gal-dots" id="galDots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== DIRECTOR ==================== -->
+<section id="director" class="director">
+    <div class="container">
+        <div class="dir-grid">
+            <div class="reveal">
+                <div class="dir-card">
+                    <div class="dir-avatar"><i class="fas fa-user-tie"></i></div>
+                    <div class="dname" data-k="dir_name">Fazilxodjaeva Shodiyaxon Baxromovna</div>
+                    <div class="dpos" data-k="dir_pos">Директор</div>
+                    <div class="dir-contacts">
+                        <a href="tel:+998909512299"><i class="fas fa-phone"></i> +998 90 951 22 99</a>
+                        <a href="mailto:shodiya.ett@gmail.com"><i class="fas fa-envelope"></i> shodiya.ett@gmail.com</a>
+                        <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> @shodishodi</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dir-text reveal d2">
+                <div class="tag" data-k="dir_tag">Руководство</div>
+                <h2 class="sec-title" data-kh="dir_title">
+                    Познакомьтесь с <span class="grad-text">директором</span>
+                </h2>
+                <p class="sec-sub" data-k="dir_desc">
+                    Богатый опыт в сфере туризма и глубокое понимание потребностей каждого клиента — основа нашего успеха. Каждое путешествие становится незабываемым благодаря профессиональному подходу и искренней заботе о вас.
+                </p>
+                <div class="dir-hi">
+                    <div class="dir-hi-item reveal d1"><i class="fas fa-globe"></i><span data-k="dh1">Международный опыт</span></div>
+                    <div class="dir-hi-item reveal d2"><i class="fas fa-handshake"></i><span data-k="dh2">Надёжный партнёр</span></div>
+                    <div class="dir-hi-item reveal d3"><i class="fas fa-award"></i><span data-k="dh3">Высокий сервис</span></div>
+                    <div class="dir-hi-item reveal d4"><i class="fas fa-heart"></i><span data-k="dh4">Страсть к путешествиям</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-head reveal">
+            <div class="tag tag--org" data-k="cnt_tag">Свяжитесь с нами</div>
+            <h2 class="sec-title" data-kh="cnt_title">
+                Начните своё <span class="grad-text">путешествие</span>
+            </h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="reveal">
+                <div class="c-items">
+                    <div class="c-item">
+                        <div class="c-ico lav"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="cd"><h4 data-k="c_addr">Адрес</h4><p data-k="c_addr_v">Ташкент, Юнусабад 4-62-20</p></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-ico teal"><i class="fas fa-phone-alt"></i></div>
+                        <div class="cd"><h4 data-k="c_phone">Телефон</h4><a href="tel:+998909512299">+998 90 951 22 99</a></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-ico org"><i class="fas fa-envelope"></i></div>
+                        <div class="cd"><h4 data-k="c_email">Email</h4><a href="mailto:shodiya.ett@gmail.com">shodiya.ett@gmail.com</a></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-ico lav"><i class="fas fa-clock"></i></div>
+                        <div class="cd"><h4 data-k="c_hours">Часы работы</h4><p data-k="c_hours_v">10:00 – 22:00</p></div>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer" class="soc soc-tg">
+                        <i class="fab fa-telegram"></i> @shodishodi
+                    </a>
+                    <a href="#" class="soc soc-ig"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/998909512299" target="_blank" rel="noopener noreferrer" class="soc soc-wa">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-wrap reveal d2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47945.44753267505!2d69.27302!3d41.36543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b4f20e54641%3A0x5a56dd3b5eb5da28!2sYunusobod%20District%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1714460000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Yunusobod, Tashkent">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="fb-logo">
+                    <div class="i"><i class="fas fa-paper-plane"></i></div>
+                    <div class="t">
+                        <span class="a">OTTIMO VIAGGIO</span>
+                        <span class="b">Travel Agency · Tashkent</span>
+                    </div>
+                </div>
+                <p data-k="ft_desc">OOO "OTTIMO VIAGGIO TRAVEL" — профессиональное турагентство в Ташкенте. Ваш надёжный партнёр в организации незабываемых путешествий.</p>
+                <p class="slogan">« Bella Vita — красивая жизнь через путешествия »</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-k="ft_svc">Услуги</h4>
+                <div class="footer-links">
+                    <a href="#services" data-k="s1">Пакетные туры</a>
+                    <a href="#services" data-k="s2">Индивидуальные туры</a>
+                    <a href="#services" data-k="s3">Визовая поддержка</a>
+                    <a href="#services" data-k="s4">Авиабилеты</a>
+                    <a href="#services" data-k="s5">Бронирование отелей</a>
+                    <a href="#services" data-k="s6">Трансферы</a>
+                    <a href="#services" data-k="s7">Круизы</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-k="ft_cnt">Контакты</h4>
+                <div class="footer-links">
+                    <a href="tel:+998909512299">+998 90 951 22 99</a>
+                    <a href="mailto:shodiya.ett@gmail.com">shodiya.ett@gmail.com</a>
+                    <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer">@shodishodi</a>
+                    <a href="#contact" data-k="c_addr_v">Ташкент, Юнусабад 4-62-20</a>
+                    <a href="#contact" data-k="c_hours_v">10:00 – 22:00</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 OOO "OTTIMO VIAGGIO TRAVEL". <span data-k="ft_rights">Все права защищены</span>.</p>
+            <div class="f-socials">
+                <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/998909512299" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating CTA -->
+<div class="float-cta">
+    <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer" class="float-btn fb-tg" title="Telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me/998909512299" target="_blank" rel="noopener noreferrer" class="float-btn fb-wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

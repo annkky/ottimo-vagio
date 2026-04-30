@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A1A4E"/><stop offset="35%" stop-color="#FF7043"/><stop offset="65%" stop-color="#FFAB91"/><stop offset="100%" stop-color="#FFD54F"/></linearGradient>
+    <linearGradient id="water6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2DD4BF"/><stop offset="100%" stop-color="#0D9488"/></linearGradient>
+    <linearGradient id="bldg6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2C1A5E"/><stop offset="100%" stop-color="#1A0E3A"/></linearGradient>
+    <filter id="glow6"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky6)"/>
+  <!-- Stars -->
+  <circle cx="50" cy="45" r="1.8" fill="white" opacity="0.9"/><circle cx="110" cy="25" r="2" fill="white" opacity="0.8"/>
+  <circle cx="680" cy="30" r="1.8" fill="white" opacity="0.9"/><circle cx="730" cy="50" r="2" fill="white" opacity="0.8"/>
+  <circle cx="760" cy="20" r="1.5" fill="white" opacity="0.7"/>
+  <!-- Setting sun -->
+  <circle cx="400" cy="310" r="50" fill="#FFD54F" opacity="0.75" filter="url(#glow6)"/>
+  <circle cx="400" cy="310" r="90" fill="#FF7043" opacity="0.12"/>
+  <!-- Bosphorus (water) -->
+  <rect y="340" width="800" height="160" fill="url(#water6)"/>
+  <!-- Wave highlights -->
+  <path d="M0 360 Q200 352 400 360 Q600 368 800 360" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+  <path d="M0 385 Q200 378 400 385 Q600 392 800 385" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+  <!-- Sun reflection on water -->
+  <ellipse cx="400" cy="390" rx="60" ry="100" fill="#FFD54F" opacity="0.15" transform="rotate(0)"/>
+  <!-- Blue Mosque silhouette -->
+  <!-- Main dome -->
+  <ellipse cx="400" cy="215" rx="78" ry="52" fill="url(#bldg6)"/>
+  <!-- Drum under dome -->
+  <rect x="328" y="234" width="144" height="38" fill="url(#bldg6)"/>
+  <!-- Half domes -->
+  <ellipse cx="310" cy="255" rx="50" ry="34" fill="url(#bldg6)"/>
+  <ellipse cx="490" cy="255" rx="50" ry="34" fill="url(#bldg6)"/>
+  <!-- Side domes -->
+  <ellipse cx="248" cy="268" rx="35" ry="24" fill="url(#bldg6)"/>
+  <ellipse cx="552" cy="268" rx="35" ry="24" fill="url(#bldg6)"/>
+  <!-- Main building body -->
+  <rect x="232" y="282" width="336" height="60" fill="url(#bldg6)"/>
+  <!-- Arched portico -->
+  <rect x="248" y="310" width="304" height="32" fill="url(#bldg6)"/>
+  <g fill="#FF7043" opacity="0.25">
+    <path d="M260 342 Q270 325 280 342Z"/><path d="M296 342 Q306 325 316 342Z"/>
+    <path d="M332 342 Q342 325 352 342Z"/><path d="M368 342 Q378 325 388 342Z"/>
+    <path d="M404 342 Q414 325 424 342Z"/><path d="M440 342 Q450 325 460 342Z"/>
+    <path d="M476 342 Q486 325 496 342Z"/><path d="M512 342 Q522 325 532 342Z"/>
+  </g>
+  <!-- 6 Minarets -->
+  <!-- Far left minaret -->
+  <rect x="175" y="195" width="12" height="110" fill="url(#bldg6)"/>
+  <polygon points="175,195 187,195 181,170" fill="url(#bldg6)"/>
+  <rect x="171" y="215" width="20" height="5" fill="url(#bldg6)"/>
+  <rect x="171" y="260" width="20" height="5" fill="url(#bldg6)"/>
+  <!-- Left minaret -->
+  <rect x="238" y="175" width="13" height="130" fill="url(#bldg6)"/>
+  <polygon points="238,175 251,175 244.5,148" fill="url(#bldg6)"/>
+  <rect x="234" y="198" width="21" height="5" fill="url(#bldg6)"/>
+  <rect x="234" y="245" width="21" height="5" fill="url(#bldg6)"/>
+  <!-- Center-left minaret -->
+  <rect x="330" y="160" width="14" height="145" fill="url(#bldg6)"/>
+  <polygon points="330,160 344,160 337,130" fill="url(#bldg6)"/>
+  <rect x="326" y="185" width="22" height="6" fill="url(#bldg6)"/>
+  <rect x="326" y="235" width="22" height="6" fill="url(#bldg6)"/>
+  <!-- Center-right minaret -->
+  <rect x="456" y="160" width="14" height="145" fill="url(#bldg6)"/>
+  <polygon points="456,160 470,160 463,130" fill="url(#bldg6)"/>
+  <rect x="452" y="185" width="22" height="6" fill="url(#bldg6)"/>
+  <rect x="452" y="235" width="22" height="6" fill="url(#bldg6)"/>
+  <!-- Right minaret -->
+  <rect x="549" y="175" width="13" height="130" fill="url(#bldg6)"/>
+  <polygon points="549,175 562,175 555.5,148" fill="url(#bldg6)"/>
+  <rect x="545" y="198" width="21" height="5" fill="url(#bldg6)"/>
+  <rect x="545" y="245" width="21" height="5" fill="url(#bldg6)"/>
+  <!-- Far right minaret -->
+  <rect x="613" y="195" width="12" height="110" fill="url(#bldg6)"/>
+  <polygon points="613,195 625,195 619,170" fill="url(#bldg6)"/>
+  <rect x="609" y="215" width="20" height="5" fill="url(#bldg6)"/>
+  <rect x="609" y="260" width="20" height="5" fill="url(#bldg6)"/>
+  <!-- Crescent on dome -->
+  <text x="400" y="205" text-anchor="middle" font-size="18" fill="#FFD54F" opacity="0.85">☽</text>
+  <!-- Small buildings / silhouette in background -->
+  <rect x="60" y="310" width="50" height="32" fill="url(#bldg6)" opacity="0.7"/>
+  <rect x="80" y="298" width="20" height="14" fill="url(#bldg6)" opacity="0.7"/>
+  <rect x="690" y="308" width="55" height="34" fill="url(#bldg6)" opacity="0.7"/>
+  <rect x="706" y="295" width="22" height="15" fill="url(#bldg6)" opacity="0.7"/>
+  <!-- Destination badge -->
+  <rect x="18" y="18" width="160" height="36" rx="18" fill="rgba(30,0,60,0.55)"/>
+  <text x="98" y="41" text-anchor="middle" font-family="Georgia,serif" font-size="15" fill="white" font-weight="bold">🕌 Стамбул</text>
+</svg>
