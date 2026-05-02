@@ -100,11 +100,6 @@ section { padding:100px 0; }
 .nav .container { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 
 .nav-logo { display:flex; align-items:center; gap:11px; }
-.nav-logo-img {
-    width:42px; height:42px; border-radius:11px;
-    object-fit:cover;
-    box-shadow:0 4px 14px rgba(155,127,212,.45);
-}
 .nav-logo .txt { display:flex; flex-direction:column; }
 .nav-logo .txt .l1 {
     font-family:'Playfair Display',serif; font-size:.95rem; font-weight:700;
@@ -831,9 +826,6 @@ section { padding:100px 0; }
     section { padding:72px 0; }
     .nav-links { display:none; }
     .burger { display:flex; }
-    .nav-logo-img { width:32px; height:32px; border-radius:8px; }
-    .nav-logo .txt .l1 { font-size:.8rem; }
-    .nav-logo .txt .l2 { font-size:.5rem; letter-spacing:.16em; }
     /* compact lang switcher in mobile navbar */
     .langs {
         display: flex;
