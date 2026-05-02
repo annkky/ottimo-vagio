@@ -41,28 +41,51 @@
             <button class="lang-btn"        data-l="uz" onclick="setLang('uz')">UZ</button>
         </div>
 
-        <button class="burger" id="burger" onclick="openMenu()" aria-label="Menu">
+        <button class="burger" id="burger" onclick="openMenu()" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
 </nav>
 
 <!-- Mobile menu -->
-<div class="mob-menu" id="mobMenu">
-    <button class="mob-close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
-    <a href="#home"     onclick="closeMenu()" data-k="nav_home">Главная</a>
-    <a href="#about"    onclick="closeMenu()" data-k="nav_about">О нас</a>
-    <a href="#services" onclick="closeMenu()" data-k="nav_services">Услуги</a>
-    <a href="#gallery"  onclick="closeMenu()" data-k="nav_gallery">Направления</a>
-    <a href="#director" onclick="closeMenu()" data-k="nav_director">Директор</a>
-    <a href="#contact"  onclick="closeMenu()" data-k="nav_contact">Контакты</a>
-    <div class="mob-langs">
-        <button class="lang-btn active" data-l="ru" onclick="setLang('ru');closeMenu()">RU</button>
-        <button class="lang-btn"        data-l="en" onclick="setLang('en');closeMenu()">EN</button>
-        <button class="lang-btn"        data-l="it" onclick="setLang('it');closeMenu()">IT</button>
-        <button class="lang-btn"        data-l="uz" onclick="setLang('uz');closeMenu()">UZ</button>
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true">
+    <div class="mob-header">
+        <div class="mob-logo">
+            <div class="mob-logo-ico"><i class="fas fa-paper-plane"></i></div>
+            <div class="mob-logo-txt">
+                <span class="mob-logo-l1">OTTIMO VIAGGIO</span>
+                <span class="mob-logo-l2">Travel Agency</span>
+            </div>
+        </div>
+        <button class="mob-close" onclick="closeMenu()" aria-label="Закрыть">
+            <span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="mob-nav">
+        <a href="#home"     onclick="closeMenu()" data-k="nav_home"><span class="mn-num">01</span><span class="mn-txt">Главная</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#about"    onclick="closeMenu()" data-k="nav_about"><span class="mn-num">02</span><span class="mn-txt">О нас</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#services" onclick="closeMenu()" data-k="nav_services"><span class="mn-num">03</span><span class="mn-txt">Услуги</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#gallery"  onclick="closeMenu()" data-k="nav_gallery"><span class="mn-num">04</span><span class="mn-txt">Направления</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#director" onclick="closeMenu()" data-k="nav_director"><span class="mn-num">05</span><span class="mn-txt">Директор</span><i class="fas fa-arrow-right"></i></a>
+        <a href="#contact"  onclick="closeMenu()" data-k="nav_contact"><span class="mn-num">06</span><span class="mn-txt">Контакты</span><i class="fas fa-arrow-right"></i></a>
+    </nav>
+
+    <div class="mob-footer">
+        <div class="mob-lang-label">Language</div>
+        <div class="mob-langs">
+            <button class="mob-lang active" data-l="ru" onclick="setLang('ru');updateMobLang()">RU</button>
+            <button class="mob-lang" data-l="en" onclick="setLang('en');updateMobLang()">EN</button>
+            <button class="mob-lang" data-l="it" onclick="setLang('it');updateMobLang()">IT</button>
+            <button class="mob-lang" data-l="uz" onclick="setLang('uz');updateMobLang()">UZ</button>
+        </div>
+        <div class="mob-contacts">
+            <a href="tel:+998909512299"><i class="fas fa-phone-alt"></i> +998 90 951 22 99</a>
+            <a href="https://t.me/shodishodi" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> @shodishodi</a>
+        </div>
     </div>
 </div>
+<div class="mob-overlay" id="mobOverlay" onclick="closeMenu()"></div>
 
 <!-- ==================== HERO ==================== -->
 <section id="home" class="hero">
