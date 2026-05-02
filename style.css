@@ -206,8 +206,8 @@ section { padding:100px 0; }
 
 /* header */
 .mob-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 22px 18px;
+    display: flex; align-items: center; justify-content: flex-end;
+    padding: 16px 18px;
     border-bottom: 1px solid rgba(255,255,255,.08);
     flex-shrink: 0;
 }

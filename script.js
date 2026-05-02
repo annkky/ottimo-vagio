@@ -228,6 +228,9 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ===== MOBILE MENU ===== */
+function toggleMenu() {
+    document.getElementById('mobMenu').classList.contains('open') ? closeMenu() : openMenu();
+}
 function openMenu() {
     const menu    = document.getElementById('mobMenu');
     const overlay = document.getElementById('mobOverlay');

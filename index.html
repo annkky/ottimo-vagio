@@ -41,7 +41,7 @@
             <button class="lang-btn"        data-l="uz" onclick="setLang('uz')">UZ</button>
         </div>
 
-        <button class="burger" id="burger" onclick="openMenu()" aria-label="Menu" aria-expanded="false">
+        <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -49,18 +49,6 @@
 
 <!-- Mobile menu -->
 <div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true">
-    <div class="mob-header">
-        <div class="mob-logo">
-            <div class="mob-logo-ico"><i class="fas fa-paper-plane"></i></div>
-            <div class="mob-logo-txt">
-                <span class="mob-logo-l1">OTTIMO VIAGGIO</span>
-                <span class="mob-logo-l2">Travel Agency</span>
-            </div>
-        </div>
-        <button class="mob-close" onclick="closeMenu()" aria-label="Закрыть">
-            <span></span><span></span>
-        </button>
-    </div>
 
     <nav class="mob-nav">
         <a href="#home"     onclick="closeMenu()" data-k="nav_home"><span class="mn-num">01</span><span class="mn-txt">Главная</span><i class="fas fa-arrow-right"></i></a>
