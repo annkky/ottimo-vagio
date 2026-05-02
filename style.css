@@ -100,10 +100,9 @@ section { padding:100px 0; }
 .nav .container { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 
 .nav-logo { display:flex; align-items:center; gap:11px; }
-.nav-logo .ico {
+.nav-logo-img {
     width:42px; height:42px; border-radius:11px;
-    background:var(--grad); display:flex; align-items:center;
-    justify-content:center; font-size:1.25rem; color:#fff;
+    object-fit:cover;
     box-shadow:0 4px 14px rgba(155,127,212,.45);
 }
 .nav-logo .txt { display:flex; flex-direction:column; }
