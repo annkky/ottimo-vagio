@@ -710,7 +710,6 @@ section { padding:100px 0; }
 
 /* ===================== ABOUT CARD PHOTO ===================== */
 .about-card-img {
-    width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
@@ -825,7 +824,7 @@ section { padding:100px 0; }
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:1024px) {
     .about-grid, .dir-grid, .contact-grid, .footer-top { grid-template-columns:1fr; gap:48px; }
-    .dir-grid > .dir-card { max-width:400px; margin:0 auto; }
+    .dir-grid .dir-card { max-width:400px; margin:0 auto; }
     .gal-slide { flex: 0 0 calc((100% - 22px) / 2); }
 }
 @media(max-width:768px) {
