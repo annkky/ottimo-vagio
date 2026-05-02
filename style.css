@@ -831,6 +831,9 @@ section { padding:100px 0; }
     section { padding:72px 0; }
     .nav-links { display:none; }
     .burger { display:flex; }
+    .nav-logo-img { width:32px; height:32px; border-radius:8px; }
+    .nav-logo .txt .l1 { font-size:.8rem; }
+    .nav-logo .txt .l2 { font-size:.5rem; letter-spacing:.16em; }
     /* compact lang switcher in mobile navbar */
     .langs {
         display: flex;
