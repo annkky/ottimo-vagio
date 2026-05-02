@@ -50,6 +50,12 @@
 <!-- Mobile menu -->
 <div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true">
 
+    <div class="mob-header">
+        <button class="mob-close" onclick="closeMenu()" aria-label="Закрыть">
+            <span></span><span></span>
+        </button>
+    </div>
+
     <nav class="mob-nav">
         <a href="#home"     onclick="closeMenu()" data-k="nav_home"><span class="mn-num">01</span><span class="mn-txt">Главная</span><i class="fas fa-arrow-right"></i></a>
         <a href="#about"    onclick="closeMenu()" data-k="nav_about"><span class="mn-num">02</span><span class="mn-txt">О нас</span><i class="fas fa-arrow-right"></i></a>
