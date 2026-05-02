@@ -217,20 +217,14 @@ section { padding:100px 0; }
 /* close button */
 .mob-close {
     width: 46px; height: 46px; border-radius: 50%;
-    background: linear-gradient(135deg, rgba(155,127,212,.25), rgba(45,212,191,.2));
-    border: 1.5px solid rgba(155,127,212,.35);
+    background: transparent;
+    border: none;
     cursor: pointer; display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; position: relative;
     touch-action: manipulation; -webkit-tap-highlight-color: transparent;
-    transition: transform .3s cubic-bezier(.34,1.56,.64,1), background .25s ease, border-color .25s ease;
-    box-shadow: 0 0 0 0 rgba(155,127,212,0);
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1);
 }
-.mob-close:hover {
-    background: linear-gradient(135deg, rgba(255,112,67,.3), rgba(255,171,145,.2));
-    border-color: rgba(255,112,67,.6);
-    transform: rotate(90deg) scale(1.08);
-    box-shadow: 0 0 18px rgba(255,112,67,.25);
-}
+.mob-close:hover { transform: rotate(90deg) scale(1.15); }
 .mob-close:active { transform: rotate(90deg) scale(.95); }
 .mob-close span {
     position: absolute; width: 18px; height: 2px;
