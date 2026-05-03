@@ -327,7 +327,7 @@ section { padding:100px 0; }
 .hero-slide.active { opacity:1; }
 .hero-slide::after {
     content:''; position:absolute; inset:0;
-    background:linear-gradient(165deg, rgba(13,13,26,.72) 0%, rgba(26,10,46,.82) 100%);
+    background:linear-gradient(165deg, rgba(13,13,26,.45) 0%, rgba(26,10,46,.55) 100%);
 }
 .hero-bg::before {
     content:''; position:absolute; inset:0; z-index:2; pointer-events:none;
